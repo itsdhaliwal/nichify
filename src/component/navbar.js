@@ -1,8 +1,10 @@
 import React,{ Component } from "react";
+import {Link} from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 class Navbar extends Component {
+  
     render() {
       return (
         <div>
@@ -17,9 +19,9 @@ class Navbar extends Component {
               </form>
               </div>
               <div className="col-2 justify-content-center justify-content-sm-end">
-                <button className="btn btn-outline-primary">Login</button>
+                <Link to="/login" className="btn btn-primary">Login</Link>
                 <a> </a> 
-                <button className="btn btn-outline-primary">Sign Up</button>
+                <Link to="/SignUp"className="btn btn-primary">Sign Up</Link>
               </div>
               </nav>
            </div>
@@ -28,6 +30,3 @@ class Navbar extends Component {
     }
 }
 export default Navbar;
-
-/*hiiiiiiiiiiiiiiiiiiiiiiiiiiii
-*hello peplooooooooooooooooooooooooooooooo*/

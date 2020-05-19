@@ -14,6 +14,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 import SignUp from "./SignUp"
+import Login from "./Login";
 
 class App extends Component {
 render(){
@@ -21,10 +22,12 @@ render(){
     <Router basename="/">
       <div>
         <Navbar/>
-        <Link to="/SignUp">Sign Up</Link>
       <Switch>
         <Route path="/SignUp">
           <SignUp/>
+        </Route>
+        <Route path="/login">
+          <Login/>
         </Route>
       </Switch>
       </div>
