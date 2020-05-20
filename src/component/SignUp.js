@@ -3,34 +3,35 @@ class SignUp extends Component {
 
     render() {
         return(
-            <div class="card text-white bg-dark mb-3">
+          <div className="d-flex pt-5 justify-content-center" style={{backgroundColor:"powderblue", height:"95vh"}}>
+            <div class="card col-6 text-white bg-dark mb-3">
   <div class="card-body">
       
   <form className="bg-color:dark">
   <div class="form-row">
-    <div class="col-lg-7 mb-5">
+    <div class="col-lg-7 mb-3">
       <label for="validationDefault01">First name</label>
       <input type="text" class="form-control" id="validationDefault01" placeholder="First Name" required></input>
     </div>
-    <div class="col-md-7 mb-5">
+    <div class="col-md-7 mb-3">
       <label for="validationDefault02">Last name</label>
       <input type="text" class="form-control" id="validationDefault02" placeholder="Last Name" required></input>
     </div>
-    <div class="col-md-7 mb-5">
+    <div class="col-md-7 mb-3">
       <label for="validationDefault02">Email</label>
       <input type="email" class="form-control" id="validationDefault02" placeholder="Email" required></input>
     </div>
-    <div class="col-md-7 mb-5">
+    <div class="col-md-7 mb-3">
       <label for="validationDefault02">Password</label>
       <input type="password" class="form-control" id="validationDefault02" placeholder="password" required></input>
     </div>
-    <div class="col-md-7 mb-5">
+    <div class="col-md-7 mb-3">
       <label for="validationDefault02">Confirm Password</label>
       <input type="password" class="form-control" id="validationDefault02" placeholder="Confirm Password" required></input>
     </div>
   </div>
   <div class="form-row">
-    <div class="col-md-7 mb-5">
+    <div class="col-md-7 mb-3">
       <label for="validationDefault03">City</label>
       <input type="text" class="form-control" id="validationDefault03" placeholder="City"required></input>
     </div>
@@ -87,11 +88,13 @@ class SignUp extends Component {
       </label>
     </div>
   </div>
-  
+  <div className="d-flex justify-content-center">
   <button class="btn btn-outline-primary" type="submit">Sign Up</button>
+  </div>
 </form>
 
   </div>
+</div>
 </div>
         )
     }

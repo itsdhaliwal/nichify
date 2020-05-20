@@ -20,7 +20,7 @@ class App extends Component {
 render(){
   return (
     <Router basename="/">
-      <div>
+      <div style={{minHeight:"100vh"}}>
         <Navbar/>
       <Switch>
         <Route path="/SignUp">
