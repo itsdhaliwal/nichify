@@ -15,6 +15,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 import SignUp from "./SignUp"
 import Login from "./Login";
+import Item from "./Item";
 
 class App extends Component {
 render(){
@@ -30,6 +31,7 @@ render(){
           <Login/>
         </Route>
       </Switch>
+      <Item/>
       </div>
     </Router>
   );
