@@ -15,7 +15,11 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 import SignUp from "./SignUp"
 import Login from "./Login";
+<<<<<<< HEAD
 import Home from "./Home";
+=======
+import Item from "./Item";
+>>>>>>> cac702cb03f105451bc01d1ac676e8cef32f4911
 
 class App extends Component {
 render(){
@@ -37,6 +41,7 @@ render(){
           <div>Page Not Found</div>
         </Route>
       </Switch>
+      <Item/>
       </div>
     </Router>
   );
