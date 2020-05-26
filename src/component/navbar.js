@@ -10,7 +10,7 @@ class Navbar extends Component {
         <div>
           <nav className="navbar navbar-expand-lg navbar-Dark bg-dark">
             <div className="col-2">
-              <a class="navbar-brand" href="#"><b>Nichify</b></a>
+              <Link class="navbar-brand" to="/Home"><b>Nichify</b></Link>
               <img src={logo} style={{height:"30px"}}></img>
             </div>
             <div class="col-8 d-flex justify-content-center">
@@ -23,7 +23,7 @@ class Navbar extends Component {
                 <Link to="/login" className="btn btn-primary">Login</Link>
                 <a> </a> 
                 <a> 
-                  
+
                 </a>
                 <Link to="/SignUp"className="btn btn-primary">Sign Up</Link>
               </div>

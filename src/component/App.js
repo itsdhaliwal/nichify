@@ -15,6 +15,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 import SignUp from "./SignUp"
 import Login from "./Login";
+import Home from "./Home";
 
 class App extends Component {
 render(){
@@ -28,6 +29,12 @@ render(){
         </Route>
         <Route path="/login">
           <Login/>
+        </Route>
+        <Route path="/Home">
+          <Home/>
+        </Route>
+        <Route path="/">
+          <div>Page Not Found</div>
         </Route>
       </Switch>
       </div>
