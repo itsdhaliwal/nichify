@@ -4,7 +4,7 @@ class Login extends Component {
 
     render() {
         return (
-            <div className="d-flex pt-5 justify-content-center" style={{backgroundColor:"powderblue", height:"50vh"}}>
+            <div className="d-flex pt-5 justify-content-center" style={{backgroundColor:"powderblue", height:"110vh"}}>
                 <div class="card col-6 text-white bg-dark mb-3">
                     <div class="card-body">
                         <form className="bg-color:dark">

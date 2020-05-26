@@ -39,6 +39,8 @@ render(){
         </Route>
       </Switch>
       <Item/>
+      <Item/>
+      <Item/>
       </div>
     </Router>
   );
