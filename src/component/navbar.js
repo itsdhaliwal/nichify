@@ -2,6 +2,8 @@ import React,{ Component } from "react";
 import {Link} from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import Login from './Login';
+import SignUp from './SignUp';
 import logo from "./logo.svg"
 class Navbar extends Component {
   
@@ -20,12 +22,12 @@ class Navbar extends Component {
               </form>
               </div>
               <div className="col-2 justify-content-center justify-content-sm-end">
-                <Link to="/login" className="btn btn-primary">Login</Link>
+                <Link to="/Login" className="btn btn-primary" >Login</Link>
                 <a> </a> 
                 <a> 
 
                 </a>
-                <Link to="/SignUp"className="btn btn-primary">Sign Up</Link>
+                <Link className="btn btn-primary" to="/SignUp">Sign Up</Link>
               </div>
               </nav>
            </div>
