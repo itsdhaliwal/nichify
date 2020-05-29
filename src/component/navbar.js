@@ -2,8 +2,6 @@ import React,{ Component } from "react";
 import {Link} from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import Login from './Login';
-import SignUp from './SignUp';
 import logo from "./logo.svg"
 class Navbar extends Component {
   

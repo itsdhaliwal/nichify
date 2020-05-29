@@ -38,10 +38,10 @@ import SignOut from "./SignOut";
     render() {
         const { email, password, error } = this.state;
         return (
-            
+            <div className="bg-dark">
             <div className="d-flex pt-5 justify-content-center" style={{backgroundColor:"powderblue", height:"60vh"}}>
                 <div class="card col-6 text-white bg-dark mb-3">
-                <h1 className="d-flex pt-5 justify-content-center">Login</h1>
+                <h1 >Login</h1>
                     <div class="card-body">
                         <form 
                         className="bg-color:dark"
@@ -82,7 +82,7 @@ import SignOut from "./SignOut";
                     </div>
                 </div>
             </div>
-            
+            </div>
         )
     }
 }

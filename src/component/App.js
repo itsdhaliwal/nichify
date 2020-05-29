@@ -8,6 +8,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import SignUp from "./SignUp";
 import Login from "./Login";
 import Home from "./Home";
+import ItemPage from "./ItemPage";
 import Item from "./Item";
 
 class App extends Component {
@@ -15,7 +16,6 @@ class App extends Component {
     return (
       <Router basename="/">
         <div style={{ minHeight: "100vh" }}>
-          <Navbar />
           <Switch>
             <Route path="/SignUp">
               <SignUp />
@@ -24,7 +24,14 @@ class App extends Component {
               <Login />
             </Route>
             <Route path="/Home">
-              <Item />
+              <div >
+              <Navbar />
+              <Home />
+              </div>    
+            </Route>
+            <Route path="/itemPage">
+            <Navbar />
+              <ItemPage/>
             </Route>
             <Route path="/">
               <div>Page Not Found</div>
