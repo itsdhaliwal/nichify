@@ -16,6 +16,7 @@ class App extends Component {
     return (
       <Router basename="/">
         <div style={{ minHeight: "100vh" }}>
+          <Navbar />
           <Switch>
             <Route path="/SignUp">
               <SignUp />
@@ -25,13 +26,11 @@ class App extends Component {
             </Route>
             <Route path="/Home">
               <div >
-              <Navbar />
-              <Home />
-              </div>    
+                <Home />
+              </div>
             </Route>
             <Route path="/itemPage">
-            <Navbar />
-              <ItemPage/>
+              <ItemPage />
             </Route>
             <Route path="/">
               <div>Page Not Found</div>

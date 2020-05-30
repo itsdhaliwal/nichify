@@ -17,7 +17,7 @@ class SignUp extends Component {
     super(props);
     this.state = { ...INITIAL_STATE };
   }
-  onSubmit = (event) => {
+  onSubmit = () => {
     const { f_name, l_name, email, pw1, city, state } = this.state;
     this.props.firebase
       .doCreateUserWithEmailAndPassword(email, pw1)
