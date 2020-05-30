@@ -20,6 +20,7 @@ class Navigation extends Component {
           <div>
             <Link to="/Login" className="btn btn-outline-primary m-1" >Login</Link>
             <Link className="btn btn-outline-primary m-1" to="/SignUp">Sign Up</Link>
+            <Link to="/ProfilePage" className="btn btn-outline-primary m-1" >Profile Page</Link>
           </div>
         )}
       </div>

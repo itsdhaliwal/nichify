@@ -2,7 +2,7 @@ import React,{ Component } from "react";
 import {Link} from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import logo from "./logo.svg"
+import logo from "./logo.png"
 import Navigation from "./Navigation"
 
 class Navbar extends Component {
@@ -13,7 +13,7 @@ class Navbar extends Component {
           <nav className="navbar m-0 navbar-expand-lg navbar-Dark bg-dark">
             <div className="col-2">
               <Link class="navbar-brand" to="/Home"><b>Nichify</b></Link>
-              <img src={logo} style={{height:"30px"}}></img>
+              <img src={logo} style={{height:"55px"}}></img>
             </div>
             <div class="col-8 d-flex justify-content-center">
               <form class="form-inline col-12">
@@ -23,13 +23,6 @@ class Navbar extends Component {
               </div>
               <div className="col-2 justify-content-center justify-content-sm-end">
                 <Navigation user={this.props.user} username={this.props.username}></Navigation>
-                <Link to="/Login" className="btn btn-primary" >Login</Link>
-                <a> </a> 
-                <a> 
-
-                </a>
-                <Link className="btn btn-primary" to="/SignUp">Sign Up</Link>
-                <Link className="btn btn-primary" to="/ProfilePage">Profile Page</Link>
               </div>
               </nav>
            </div>
