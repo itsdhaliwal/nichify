@@ -17,7 +17,7 @@ class Home extends Component {
     return (
         <div style={{backgroundColor:"powderblue"}}>
             
-        <div class="carousel cycle m-0 p-5 carousal slide shadow-lg p-3 mb-5 bg-white rounded " data-ride="carousel">
+        <div class="carousel cycle m-0 p-5 carousal slide shadow-lg p-3 mb-5 bg-light rounded " data-ride="carousel">
           <div class="carousel-inner m-0 p-0" style={{ height: "600px" }}>
             <div class="carousel-item active m-0 p-0 ">
               <Link to="/ItemPage">

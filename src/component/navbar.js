@@ -7,8 +7,8 @@ class Navbar extends Component {
   
     render() {
       return (
-        <div>
-          <nav className="navbar navbar-expand-lg navbar-Dark bg-dark">
+        <div className="m-0">
+          <nav className="navbar m-0 navbar-expand-lg navbar-Dark bg-dark">
             <div className="col-2">
               <Link class="navbar-brand" to="/Home"><b>Nichify</b></Link>
               <img src={logo} style={{height:"30px"}}></img>

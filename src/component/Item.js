@@ -9,7 +9,7 @@ class Item extends Component {
     render() {
         return (
             <div className="d-inline-flex pt-5 justify-content-center " style={{height:"80vh",width:"65vh"}}>
-                <div class="card col-8 text-white mb-3 bg-dark shadow-lg p-3 mb-5 bg-dark rounded">
+                <div class="card col-8 text-white mb-3 bg-dark shadow-lg p-5 mb-5 bg-dark rounded">
                     <div class="card-body">
                         <img src={hammer} ></img>
                         <h4 class="card-title">Hand Crafted Thor's Hammmer</h4>
