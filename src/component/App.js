@@ -10,12 +10,14 @@ import Login from "./Login";
 import Home from "./Home";
 import ItemPage from "./ItemPage";
 import Item from "./Item";
+import ProfilePage from "./ProfilePage"
 
 class App extends Component {
   render() {
     return (
       <Router basename="/">
         <div style={{ minHeight: "100vh" }}>
+          <Navbar />
           <Switch>
             <Route path="/SignUp">
               <SignUp />
@@ -23,15 +25,16 @@ class App extends Component {
             <Route path="/login">
               <Login />
             </Route>
+            <Route path="/ProfilePage">
+              <ProfilePage />
+            </Route>
             <Route path="/Home">
               <div >
-              <Navbar />
-              <Home />
-              </div>    
+                <Home />
+              </div>
             </Route>
             <Route path="/itemPage">
-            <Navbar />
-              <ItemPage/>
+              <ItemPage />
             </Route>
             <Route path="/">
               <div>Page Not Found</div>
