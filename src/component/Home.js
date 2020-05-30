@@ -9,7 +9,7 @@ import pic7 from "./7.jpg";
 import pic8 from "./8.jpg";
 import ItemPage from "./ItemPage";
 import Item from"./Item";
-import ItemFetch from"./ItemFetch";
+import ItemFetch from"./ItemFetch"
 
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 

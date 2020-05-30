@@ -3,6 +3,7 @@ import {Link} from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import logo from "./logo.svg"
+
 class Navbar extends Component {
   
     render() {
@@ -26,6 +27,7 @@ class Navbar extends Component {
 
                 </a>
                 <Link className="btn btn-primary" to="/SignUp">Sign Up</Link>
+                <Link className="btn btn-primary" to="/ProfilePage">Profile Page</Link>
               </div>
               </nav>
            </div>

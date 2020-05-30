@@ -10,6 +10,7 @@ import Login from "./Login";
 import Home from "./Home";
 import ItemPage from "./ItemPage";
 import Item from "./Item";
+import ProfilePage from "./ProfilePage"
 
 class App extends Component {
   render() {
@@ -23,6 +24,9 @@ class App extends Component {
             </Route>
             <Route path="/login">
               <Login />
+            </Route>
+            <Route path="/ProfilePage">
+              <ProfilePage />
             </Route>
             <Route path="/Home">
               <div >
