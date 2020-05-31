@@ -10,6 +10,7 @@ import pic8 from "./8.jpg";
 import ItemPage from "./ItemPage";
 import Item from"./Item";
 import ItemFetch from"./ItemFetch"
+import ItemUploader from"./ItemUploader"
 
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 
@@ -105,6 +106,7 @@ class Home extends Component {
           <Item/>
           <Item/>
           <ItemFetch/>
+          <ItemUploader/>
         </div>
     );
   }
