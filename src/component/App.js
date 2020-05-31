@@ -12,6 +12,7 @@ import Home from "./Home";
 import ItemPage from "./ItemPage";
 import Item from "./Item";
 import ProfilePage from "./ProfilePage";
+import ItemUploader2 from "./ItemUploader2";
 
 class App extends Component {
   state = { userData: null, f_name: null };
@@ -56,6 +57,9 @@ class App extends Component {
             </Route>
             <Route path="/ProfilePage">
               <ProfilePage />
+            </Route>
+            <Route path="/ItemUploader2">
+              <ItemUploader2 />
             </Route>
             <Route path="/Home">
               <div>

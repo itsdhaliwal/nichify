@@ -12,8 +12,8 @@ var ITEM = {
 };
 
 class ItemUploader2 extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = { ...ITEM };
         this.handleChange = this
       .handleChange

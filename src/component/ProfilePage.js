@@ -13,7 +13,7 @@ class ProfilePage extends Component {
             <div>Email</div>
             <div>City</div>
             <div>{this.props.f_name}</div>
-            <ItemUploader2/>
+            
         </div>
     );
   }

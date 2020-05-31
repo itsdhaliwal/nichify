@@ -6,7 +6,9 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { getDefaultNormalizer, waitForDomChange } from "@testing-library/react";
 // storage = this.props.firebase.storage().ref()
 import ImageFetch from "./ImageFetch"
+import ItemPage from "./ItemPage";
 
+import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class ItemFetch2 extends Component {
   state={items:null}
@@ -45,7 +47,8 @@ class ItemFetch2 extends Component {
                 <ImageFetch itemName = {itemKey}/>
                 <h4 class="card-title">{this.state.items[itemKey].itemName}</h4>
                 <p class="card-text">{this.state.items[itemKey].itemDesc}</p>
-                <p class="card-text">{this.state.items[itemKey].itemPrice}</p>
+                <p class="card-text">Rs.{this.state.items[itemKey].itemPrice}</p>
+                <Link to="/ItemPage" class="btn btn-outline-primary">BUY</Link>
             </div>
         </div>
     </div> ))
