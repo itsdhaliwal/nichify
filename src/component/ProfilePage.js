@@ -11,7 +11,7 @@ class ProfilePage extends Component {
             <div>Second name</div>
             <div>Email</div>
             <div>City</div>
-            <div>State</div>
+            <div>{this.props.f_name}</div>
         </div>
     );
   }

@@ -22,7 +22,7 @@ class Navbar extends Component {
               </form>
               </div>
               <div className="col-2 justify-content-center justify-content-sm-end">
-                <Navigation user={this.props.user} username={this.props.username}></Navigation>
+                <Navigation user={this.props.user} f_name={this.props.f_name}></Navigation>
               </div>
               </nav>
            </div>
