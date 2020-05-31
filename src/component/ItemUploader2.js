@@ -84,7 +84,7 @@ class ItemUploader2 extends Component {
                     <br/>
                         <input type="file" onChange={this.handleChange}/>
                     <br/>
-                    <img src={this.state.url || 'http://via.placeholder.com/400x300'} alt="Uploaded images" height="300" width="400"/>
+                    <img src={this.state.url || 'http://via.placeholder.com/200'} alt="Uploaded images" height="200" width="200"/>
                     <br/>
                     <progress value={this.state.progress} max="100"/>
                 </div>
