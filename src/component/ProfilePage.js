@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withFirebase } from "./Firebase";
 import { withRouter } from "react-router-dom";
-import ItemUploader from"./ItemUploader"
+import ItemUploader2 from"./ItemUploader2"
 
 class ProfilePage extends Component {
 
@@ -13,7 +13,7 @@ class ProfilePage extends Component {
             <div>Email</div>
             <div>City</div>
             <div>{this.props.f_name}</div>
-            <ItemUploader/>
+            <ItemUploader2/>
         </div>
     );
   }
