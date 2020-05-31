@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import logo from "./logo.png"
+import Navigation from "./Navigation"
 
 class Navbar extends Component {
   
@@ -21,17 +22,7 @@ class Navbar extends Component {
               </form>
               </div>
               <div className="col-2 justify-content-center justify-content-sm-end">
-<<<<<<< HEAD
                 <Navigation user={this.props.user} f_name={this.props.f_name}></Navigation>
-=======
-                <Link to="/Login" className="btn btn-primary" >Login</Link>
-                <a> </a> 
-                <a> 
-
-                </a>
-                <Link className="btn btn-primary" to="/SignUp">Sign Up</Link>
-                <Link className="btn btn-primary" to="/ProfilePage">Profile Page</Link>
->>>>>>> 1933b74042383c93d92cb812a3ff5b47ed6117fd
               </div>
               </nav>
            </div>
