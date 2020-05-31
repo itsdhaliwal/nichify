@@ -13,7 +13,7 @@ class Navbar extends Component {
           <nav className="navbar m-0 navbar-expand-lg navbar-Dark bg-dark">
             <div className="col-2">
               <Link class="navbar-brand" to="/Home"><b>Nichify</b></Link>
-              <img src={logo} style={{height:"30px"}}></img>
+              <img src={logo} style={{height:"60px"}}></img>
             </div>
             <div class="col-8 d-flex justify-content-center">
               <form class="form-inline col-12">
