@@ -99,7 +99,7 @@ class Home extends Component {
             <span class="sr-only">Next</span>
           </a>
         </div>
-          <ItemFetch/>
+        
           <ItemFetch2/>
         </div>
     );
