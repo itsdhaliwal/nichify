@@ -89,7 +89,7 @@ class ItemUploader2 extends Component {
                     <br/>
                     <img src={this.state.url || 'http://via.placeholder.com/200'} alt="Uploaded images" height="200" width="200"/>
                     <br/>
-                    <progress value={this.state.progress} max="100"/>
+                    <progress value={this.state.progress} style={{ backgroundColor: "powderblue", width: "28vh" }} max="100"/>
                 </div>
                 <button class="btn btn-outline-primary" type="submit">Upload</button>
                 </form>
