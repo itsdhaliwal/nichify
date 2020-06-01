@@ -71,6 +71,9 @@ class ItemUploader2 extends Component {
         var {item_name,item_desc,item_price}= this.state;
         return (
             <div>
+                <div className="d-flex pt-5 justify-content-center" style={{ backgroundColor: "powderblue", height: "95vh" }}>
+                <div class="card col-6 text-white bg-dark mb-3">
+          <div class="card-body">
                 <h1>Item Uploader</h1>
                 <form onSubmit={(e) => { e.preventDefault(); this.onSubmit();}} >
                 <h4>Item Name</h4>
@@ -90,6 +93,9 @@ class ItemUploader2 extends Component {
                 </div>
                 <button class="btn btn-outline-primary" type="submit">Upload</button>
                 </form>
+                </div>
+                </div>
+                </div>
             </div>
         );
     }
