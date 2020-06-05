@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 import { withFirebase } from "./Firebase";
 import { withRouter } from "react-router-dom";
-import ItemUploader2 from"./ItemUploader2"
+import ItemUploader from"./ItemUploader"
 
 class ProfilePage extends Component {
-
-  render() {
+  render() {   
+    console.log(this.props)
     return (
         <div>
             <div>First Name</div>
             <div>Second name</div>
             <div>Email</div>
-            <div>City</div>
-            <div>{this.props.f_name}</div>
+            <div>City {this.props.user.city}</div>
+            <div>{this.props.user.f_name}</div>
             
         </div>
     );

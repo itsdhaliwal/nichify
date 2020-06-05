@@ -12,19 +12,19 @@ import Home from "./Home";
 import ItemPage from "./ItemPage";
 import Item from "./Item";
 import ProfilePage from "./ProfilePage";
-import ItemUploader2 from "./ItemUploader2";
+import ItemUploader from "./ItemUploader";
 
 class App extends Component {
-  state = { userData: null, f_name: null };
+  state = { userData: null, loggedUser: null };
   fetchUserName = () => {
     if (this.state.userData != null) {
       this.props.firebase.db
         .ref("users/" + this.state.userData.uid)
         .once("value")
         .then((snapshot) => {
-          const user = (snapshot.val() && snapshot.val().f_name) || "Anonymous";
-          if (this.state.f_name != user) {
-            this.setState({ f_name: user });
+          const user = (snapshot.val()) || "Anonymous";
+          if (this.state.loggedUser==null ||(this.state.loggedUser && this.state.loggedUser.f_name != user.f_name)) {
+            this.setState({ loggedUser: user });
           }
         });
     }
@@ -38,28 +38,24 @@ class App extends Component {
     });
   };
   componentDidUpdate() {
+    console.log("updated")
     this.fetchUserName();
   }
   componentDidMount() {
     this.fetchUserData();
   }
   render() {
+    if(this.state.userData==null || this.state.loggedUser==null) 
     return (
       <Router basename="/">
         <div style={{ minHeight: "100vh" }}>
-          <Navbar f_name={this.state.f_name} user={this.state.userData} />
+          <Navbar />
           <Switch>
             <Route path="/SignUp">
               <SignUp />
             </Route>
             <Route path="/login">
               <Login />
-            </Route>
-            <Route path="/ProfilePage">
-              <ProfilePage />
-            </Route>
-            <Route path="/ItemUploader2">
-              <ItemUploader2 />
             </Route>
             <Route path="/Home">
               <div>
@@ -69,6 +65,42 @@ class App extends Component {
             <Route path="/itemPage">
               <ItemPage />
             </Route>
+            <Route path="/">
+              <div>Page Not Found</div>
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    );
+    else
+    return (
+      <Router basename="/">
+        <div style={{ minHeight: "100vh" }}>
+          <Navbar f_name={this.state.loggedUser.f_name} user={this.state.userData} />
+          <Switch>
+            <Route path="/SignUp">
+              <SignUp />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/ProfilePage">
+              <ProfilePage user={this.state.loggedUser}  />
+            </Route>
+            <Route path="/ItemUploader">
+              <ItemUploader />
+            </Route>
+            <Route path="/Home">
+              <div>
+                <Home />
+              </div>
+            </Route>
+            <Route path="/itemPage">
+              <ItemPage />
+            </Route>
+            <Route path="/Item/:id?" render={(props) => (
+          <Item authUser={this.state.userrops} />)
+        } />
             <Route path="/">
               <div>Page Not Found</div>
             </Route>
