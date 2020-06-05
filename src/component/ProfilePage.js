@@ -8,9 +8,9 @@ class ProfilePage extends Component {
     console.log(this.props)
     return (
         <div>
-            <div>First Name</div>
+            <div>First Name {this.props.user.f_name}</div>
             <div>Second name</div>
-            <div>Email</div>
+            <div>Email {this.props.user.email} </div>
             <div>City {this.props.user.city}</div>
             <div>{this.props.user.f_name}</div>
             
