@@ -15,7 +15,9 @@ import ProfilePage from "./ProfilePage";
 import ItemUploader from "./ItemUploader";
 
 class App extends Component {
-  state = { userData: null, loggedUser: null };
+  state = {
+    userData: null,
+    loggedUser: null };
   fetchUserName = () => {
     if (this.state.userData != null) {
       this.props.firebase.db
@@ -95,11 +97,12 @@ class App extends Component {
                 <Home />
               </div>
             </Route>
-            <Route path="/itemPage">
-              <ItemPage />
-            </Route>
+           
+            <Route path="/itemPage/:id?" render={(props) => (
+          <ItemPage authUser={this.state.userData} />)
+        } />
             <Route path="/Item/:id?" render={(props) => (
-          <Item authUser={this.state.userrops} />)
+          <Item authUser={this.state.userData} />)
         } />
             <Route path="/">
               <div>Page Not Found</div>

@@ -7,7 +7,6 @@ import { getDefaultNormalizer, waitForDomChange } from "@testing-library/react";
 // storage = this.props.firebase.storage().ref()
 import ImageFetch from "./ImageFetch"
 import ItemPage from "./ItemPage";
-import Buy from "./Buy";
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class ItemFetch extends Component {
@@ -33,13 +32,17 @@ class ItemFetch extends Component {
   componentDidMount() {
     //this.getImage('sword4')
     this.getData();
+    
   }
 
   render() {
     if(this.state.items)
     return (
       <div>
-         {Object.keys(this.state.items).map((itemKey)=>(
+         {Object.keys(this.state.items).map((itemKey)=>{
+           console.log("This is item Key");
+           console.log(itemKey);
+           return(
          <div className="d-inline-flex pt-5 justify-content-center " style={{height:"80vh",width:"65vh"}}>
         <div class="card col-8 text-white mb-3 bg-dark shadow-lg p-5 mb-5 bg-dark rounded">
             <div class="card-body">
@@ -47,11 +50,12 @@ class ItemFetch extends Component {
                 <h4 class="card-title">{this.state.items[itemKey].itemName}</h4>
                 <p class="card-text">{this.state.items[itemKey].itemDesc}</p>
                 <p class="card-text">Rs.{this.state.items[itemKey].itemPrice}</p>
-                <Buy itemName = {itemKey} />
+                <Link className="btn btn-outline-primary" to={"/ItemPage/"+itemKey}>
+                  Buy
+                </Link>
             </div>
         </div>
-    </div> ))
-      
+    </div> )})
   }
     </div>
     );
