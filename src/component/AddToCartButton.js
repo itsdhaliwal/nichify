@@ -18,7 +18,7 @@ adddata =  () => {
 render() {
     return (
         <div>   
-            <button class="btn btn-outline-primary" onClick = {this.adddata}>Add to Cart{this.state.itemkey1}</button>
+            <button class="btn btn-outline-primary" onClick = {this.adddata}>Add to Cart</button>
         </div>
         )
     }
