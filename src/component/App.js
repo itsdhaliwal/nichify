@@ -13,6 +13,7 @@ import ItemPage from "./ItemPage";
 import Item from "./Item";
 import ProfilePage from "./ProfilePage";
 import ItemUploader from "./ItemUploader";
+import Cart from "./Cart";
 
 class App extends Component {
   state = {
@@ -22,8 +23,7 @@ class App extends Component {
     if (this.state.userData != null) {
       this.props.firebase.db
         .ref("users/" + this.state.userData.uid)
-        .once("value")
-        .then((snapshot) => {
+        .on("value",(snapshot) => {
           const user = (snapshot.val()) || "Anonymous";
           if (this.state.loggedUser==null ||(this.state.loggedUser && this.state.loggedUser.f_name != user.f_name)) {
             this.setState({ loggedUser: user });
@@ -92,10 +92,11 @@ class App extends Component {
             <Route path="/ItemUploader">
               <ItemUploader />
             </Route>
+            <Route path="/Cart">
+              <Cart user={this.state.userData}/>
+            </Route>
             <Route path="/Home">
-              <div>
-                <Home />
-              </div>
+                <Home user={this.state.userData}/>
             </Route>
            
             <Route path="/itemPage/:id?" render={(props) => (

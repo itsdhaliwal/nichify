@@ -98,8 +98,7 @@ class Home extends Component {
             <span class="sr-only">Next</span>
           </a>
         </div>
-        
-          <ItemFetch/>
+          <ItemFetch userID = {(this.props.user != null)?this.props.user.uid:''}/>
         </div>
     );
   }
