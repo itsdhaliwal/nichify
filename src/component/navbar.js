@@ -43,7 +43,7 @@ class Navbar extends Component {
       <div className="m-0">
         <nav className="navbar m-0 navbar-expand-lg navbar-Dark bg-dark">
           <div className="col-2">
-    <Link class="navbar-brand" to="/Home"><b>Nichify{this.state.Key}</b></Link>
+    <Link class="navbar-brand" to="/Home"><b>Nichify</b></Link>
             <img src={logo} style={{ height: "60px" }}></img>
           </div>
           <div class="col-8 d-flex justify-content-center">

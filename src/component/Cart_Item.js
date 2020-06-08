@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { withFirebase } from "./Firebase";
 import { withRouter } from "react-router-dom";
 import ImageFetch from "./ImageFetch";
-
+import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 class Cart_Item extends Component {
 
     state = {
@@ -94,7 +94,9 @@ constructor(props){
                                         <p>Rs.{this.state.item.itemPrice}</p>
                                     </div>
                                     <div class="col-sm">
-                                        <button className="btn btn-outline-primary">More Info</button><br/><br/>
+                                        <Link className="btn btn-outline-primary" to={"/ItemPage/" + this.props.itemkey}>
+                                         View Item
+                                         </Link><br/><br/>
                                         <button className="btn btn-outline-primary " 
                                         onClick ={()=>{this.Mover()}}>Move to {(this.props.type == "cart")?"Wishlist":"Cart"}</button>
                                         <br/><br/>
