@@ -56,7 +56,7 @@ class ItemFetch extends Component {
                     <AddToCartButton itemName={itemKey} userID={(this.props.userID != null) ? this.props.userID : ''} />
                     <br />
                     <Link className="btn btn-outline-primary" to={"/ItemPage/" + itemKey}>
-                      Buy
+                      View Item
                 </Link>
                   </div>
                 </div>

@@ -14,6 +14,8 @@ import Item from "./Item";
 import ProfilePage from "./ProfilePage";
 import ItemUploader from "./ItemUploader";
 import Cart from "./Cart";
+import Buy from "./Buy";
+import AddMoney from "./AddMoney";
 
 class App extends Component {
   state = {
@@ -89,6 +91,9 @@ class App extends Component {
             <Route path="/ProfilePage">
               <ProfilePage user={this.state.loggedUser}  />
             </Route>
+            <Route path="/AddMoney">
+                <AddMoney user={this.state.userData}/>
+            </Route>
             <Route path="/ItemUploader">
               <ItemUploader />
             </Route>
@@ -102,8 +107,8 @@ class App extends Component {
             <Route path="/itemPage/:id?" render={(props) => (
           <ItemPage authUser={this.state.userData} />)
         } />
-            <Route path="/Item/:id?" render={(props) => (
-          <Item authUser={this.state.userData} />)
+            <Route path="/Buy/:id?" render={(props) => (
+          <Buy user={this.state.loggedUser}/>)
         } />
             <Route path="/">
               <div>Page Not Found</div>
