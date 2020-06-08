@@ -42,13 +42,13 @@ class ItemFetch extends Component {
   render() {
     if (this.state.items)
       return (
-        <div>
+        <div className="row m-0 col-12">
           {Object.keys(this.state.items).map((itemKey) => {
             console.log("This is item Key");
             console.log(itemKey);
             return (
-              <div className="d-inline-flex pt-5 justify-content-center " style={{ height: "90vh", width: "65vh" }}>
-                <div class="card col-8 text-white mb-3 bg-dark shadow-lg p-8 mb-12 bg-dark rounded">
+              <div className="col-4 pt-5 justify-content-center" style={{ height: "90vh" }}>
+                <div class="card 10 text-white mb-3 bg-dark shadow-lg bg-dark rounded">
                   <div class="card-body">
                     <ImageFetch itemName={itemKey} />
                     <h4 class="card-title">{this.state.items[itemKey].itemName}</h4>

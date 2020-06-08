@@ -21,8 +21,8 @@ class Home extends Component {
   render() {
 
     return (
-      <div style={{ backgroundColor: "powderblue" }}>
-        <div id="mycorousel" className="carousel slide m-0 p-5 carousal slide shadow-lg p-3 mb-5 bg-secondary rounded " data-ride="carousel">
+      <div >
+        <div id="mycorousel" className="carousel slide m-0 p-5 carousal slide p-3 mb-5 rounded " data-ride="carousel">
           <div className="carousel-inner m-0 p-0" style={{ height: "600px" }}>
           <ol class="carousel-indicators">
             <li data-target="#mycorousel" data-slide-to="0" class="active"></li>
@@ -69,8 +69,6 @@ class Home extends Component {
           </a>
         </div>
         <ItemFetch userID={(this.props.user != null) ? this.props.user.uid : ''} />
-        <br/>dfswgf<br/>
-        <TypeFetcher userID={(this.props.user != null) ? this.props.user.uid : ''} />
       </div>
     );
   }

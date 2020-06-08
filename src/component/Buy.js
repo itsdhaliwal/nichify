@@ -40,7 +40,7 @@ class Buy extends Component {
     var a=this.state.bal-i;
     updates["users/"+this.props.firebase.auth.currentUser.uid+"/Balance"]=this.state.bal-i
     if(a<0){
-        alert("Not Enough balance");
+        alert("Not Enough Balance");
     }
     else
     {

@@ -34,8 +34,8 @@ class ItemPage extends Component {
          <div className="row p-4">
             <div className="col-4">
                 <div className="card shadow p-3 bg-white rounded ">
-                <div className="" style={{backgroundColor:"powderblue" ,height:"350px"}}>
-                <div class="card-body">
+                <div className="" style={{height:"350px" }}>
+                  <div className="card-body">
                 <ImageFetch itemName = {this.props.match.params.id}/>
                   <h4 class="card-title">{this.state.item.itemType}</h4>
                 </div>

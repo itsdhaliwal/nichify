@@ -32,7 +32,7 @@ class ImageFetch extends Component {
   render() {
     return (
         <div>        
-            <img src={this.state.item} alt="sword" className = "img-thumbnail" />
+            <img src={this.state.item} alt="sword" style={{height:"200px" , width:"200px"}} />
         </div>
     );
   }

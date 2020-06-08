@@ -96,7 +96,7 @@ class App extends Component {
               <Login />
             </Route>
             <Route path="/ProfilePage">
-              <ProfilePage user={this.state.loggedUser}  />
+              <ProfilePage user={this.state.loggedUser} authUser={this.state.userData} />
             </Route>
             <Route path="/AddMoney">
                 <AddMoney user={this.state.userData}/>

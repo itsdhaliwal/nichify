@@ -84,7 +84,7 @@ class ItemUploader extends Component {
                 <input type="text" placeholder="Enter Item Desc" name="item_desc"  value={item_desc} onChange={this.onChange}></input>
                 <h4>Item Price</h4>
                 <input type="number" placeholder="Enter Item Price" name="item_price"  value={item_price} onChange={this.onChange}></input>
-                <h4>Item Price</h4>
+                <h4>Item Type</h4>
                 <input type="text" placeholder="Enter Item Type" name="item_type"  value={item_type} onChange={this.onChange}></input>
                 <br/>
                 <div >

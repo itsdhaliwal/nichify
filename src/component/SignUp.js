@@ -195,7 +195,7 @@ class SignUp extends Component {
                   </select>
                 </div>
                 <div class="col-md-3 mb-5">
-                  <label for="validationDefault05">Zip</label>
+                  <label for="validationDefault05">Balance</label>
                   <input
                     type="number"
                     class="form-control"
