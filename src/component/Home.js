@@ -69,8 +69,6 @@ class Home extends Component {
           </a>
         </div>
         <ItemFetch userID={(this.props.user != null) ? this.props.user.uid : ''} />
-        <br/>jddjdjdjd<br/>
-        <TypeFetcher userID={(this.props.user != null) ? this.props.user.uid : ''}/>
       </div>
     );
   }
