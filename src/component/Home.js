@@ -84,7 +84,7 @@ class Home extends Component {
             role="button"
             data-slide="prev"
           >
-            <span class="carousel-control-prev-icon"></span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
           <a
