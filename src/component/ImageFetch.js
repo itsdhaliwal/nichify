@@ -8,9 +8,16 @@ class ImageFetch extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      item: ''
+      item: '',
+      itemName:null
     }
 
+  }
+  componentDidUpdate() {
+    if(this.state.itemName!=this.props.itemName) {
+      this.setState({itemName:this.props.itemName})
+      this.getImage(this.props.itemName)
+    }
   }
   getImage = (image) => {
     console.log(this.props)
@@ -19,6 +26,7 @@ class ImageFetch extends Component {
     }, () => { console.log("notFound") })
   }
   componentDidMount() {
+    this.setState({itemName:this.props.itemName})
     this.getImage(this.props.itemName)
   }
   render() {

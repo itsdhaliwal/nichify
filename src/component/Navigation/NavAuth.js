@@ -16,8 +16,9 @@ class NavAuth extends Component {
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <Link to="/ProfilePage" className="btn" >Profile Page</Link>
-        <Link to="/ItemUploader" className="btn" >Sell</Link>
-        <Link to="/Cart" className="btn" >Cart</Link>
+        <Link to="/ItemUploader" className="btn" >Sell</Link><br/>
+        <Link to="/Cart" className="btn" >Cart</Link><br/>
+        <Link to="/Wishlist" className="btn" >Wishlist</Link><br/>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#"><SignOut /></a>
         </div>

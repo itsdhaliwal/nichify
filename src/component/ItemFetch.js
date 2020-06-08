@@ -11,6 +11,7 @@ import AddToCart from "./AddToCartButton"
 
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 import AddToCartButton from "./AddToCartButton";
+import AddToWishlistButton from "./AddToWishlistButton";
 
 class ItemFetch extends Component {
   state = { items: null }
@@ -46,14 +47,16 @@ class ItemFetch extends Component {
             console.log("This is item Key");
             console.log(itemKey);
             return (
-              <div className="d-inline-flex pt-5 justify-content-center " style={{ height: "80vh", width: "65vh" }}>
-                <div class="card col-8 text-white mb-3 bg-dark shadow-lg p-6 mb-12 bg-dark rounded">
+              <div className="d-inline-flex pt-5 justify-content-center " style={{ height: "90vh", width: "65vh" }}>
+                <div class="card col-8 text-white mb-3 bg-dark shadow-lg p-8 mb-12 bg-dark rounded">
                   <div class="card-body">
                     <ImageFetch itemName={itemKey} />
                     <h4 class="card-title">{this.state.items[itemKey].itemName}</h4>
                     <p class="card-text">{this.state.items[itemKey].itemDesc}</p>
                     <p class="card-text">Rs.{this.state.items[itemKey].itemPrice}</p>
                     <AddToCartButton itemName={itemKey} userID={(this.props.userID != null) ? this.props.userID : ''} />
+                    <br />
+                    <AddToWishlistButton itemName={itemKey} userID={(this.props.userID != null) ? this.props.userID : ''} />
                     <br />
                     <Link className="btn btn-outline-primary" to={"/ItemPage/" + itemKey}>
                       Buy

@@ -14,6 +14,7 @@ import Item from "./Item";
 import ProfilePage from "./ProfilePage";
 import ItemUploader from "./ItemUploader";
 import Cart from "./Cart";
+import Wishlist from "./Wishlist";
 
 class App extends Component {
   state = {
@@ -94,6 +95,9 @@ class App extends Component {
             </Route>
             <Route path="/Cart">
               <Cart user={this.state.userData}/>
+            </Route>
+            <Route path="/Wishlist">
+              <Wishlist user={this.state.userData}/>
             </Route>
             <Route path="/Home">
                 <Home user={this.state.userData}/>
