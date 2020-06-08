@@ -6,7 +6,8 @@ import ImageFetch from "./ImageFetch"
 import {withFirebase} from "./Firebase"
 import Buy from "./Buy"
 import { Link, withRouter} from "react-router-dom";
-
+import AddToCartButton from "./AddToCartButton";
+import AddToWishlistButton from "./AddToWishlistButton";
 class ItemPage extends Component {
 
   state={
@@ -61,10 +62,10 @@ class ItemPage extends Component {
                     <Link to={"/Buy/" + this.state.item.itemPrice } className="btn btn-outline-primary p-2 pr-5" >Buy</Link>
                     </div>
                     <div className="pt-5">
-                    <Link to="wishlist" className="btn btn-outline-primary p-2 pr-4" >Add to Wishlist</Link>
+                    <AddToCartButton itemName={this.props.match.params.id} userID={this.props.userID} />
                     </div>
                     <div className="pt-5">
-                    <Link to="/AddToCart" className="btn btn-outline-primary p-2" >Add to cart</Link>
+                    <AddToWishlistButton itemName={this.props.match.params.id} userID={this.props.user} />
                     </div>
                 </div>
                 </div>
