@@ -10,6 +10,7 @@ const INITIAL_STATE = {
   pw2: "",
   city: "",
   state: "",
+  Balance: 0,
   error: null,
 };
 class SignUp extends Component {
@@ -18,7 +19,7 @@ class SignUp extends Component {
     this.state = { ...INITIAL_STATE };
   }
   onSubmit = () => {
-    const { f_name, l_name, email, pw1, city, state } = this.state;
+    const { f_name, l_name, email, pw1, city, state, Balance } = this.state;
     this.props.firebase
       .doCreateUserWithEmailAndPassword(email, pw1)
       .then((authUser) => {
@@ -29,6 +30,7 @@ class SignUp extends Component {
           pw1,
           state,
           city,
+          Balance,
         });
         this.props.history.push("/Home");
       })
@@ -44,7 +46,7 @@ class SignUp extends Component {
     this.setState({ [event.target.name]: event.target.value });
   };
   render() {
-    const { f_name, l_name, email, pw1, pw2, state, city, error } = this.state;
+    const { f_name, l_name, email, pw1, pw2, state, city, Balance, error } = this.state;
 
     const isInvalid = pw1 !== pw2 || pw1 === "";
 
@@ -198,7 +200,10 @@ class SignUp extends Component {
                     type="number"
                     class="form-control"
                     id="validationDefault05"
-                    name="zip"
+                    Placeholde="Add Balance"
+                    name="Balance"
+                    onChange={this.onChange}
+                    value={Balance}
                     required
                   ></input>
                 </div>

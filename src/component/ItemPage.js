@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import ImageFetch from "./ImageFetch"
 import {withFirebase} from "./Firebase"
+import Buy from "./Buy"
 import { Link, withRouter} from "react-router-dom";
 
 class ItemPage extends Component {
@@ -55,7 +56,7 @@ class ItemPage extends Component {
                 <div className="mb-1" style={{backgroundColor:"powderblue",height:"355px"}}>
                 <div class="card-body">
                 <div className="pt-5">
-                    <Link to="Buy" className="btn btn-outline-primary p-2 pr-5" >Buy</Link>
+                    <Link to={"/Buy/" + this.state.item.itemPrice } className="btn btn-outline-primary p-2 pr-5" >Buy</Link>
                     </div>
                     <div className="pt-5">
                     <Link to="wishlist" className="btn btn-outline-primary p-2 pr-4" >Add to Wishlist</Link>
