@@ -3,6 +3,8 @@ import { withFirebase } from "./Firebase";
 import { Link, withRouter} from "react-router-dom";
 import ItemUploader from"./ItemUploader"
 import Cart from "./Cart.js"
+import Wishlist from "./Wishlist.js"
+
 class ProfilePage extends Component {
   render() {   
     console.log(this.props)
@@ -41,8 +43,10 @@ class ProfilePage extends Component {
           <Link to="/AddMoney" className="btn btn-dark col-6 p-2" >Add Money</Link>
         </div>
       </div>
-      <div className="col-8 py-2"><div className="display-4">Other stuff like cart, wishlist</div></div>
-      <Cart user={this.props.authuser}/>
+      <div className="col-8 py-2">
+      <Cart user={this.props.authUser}/>
+      <Wishlist user={this.props.authUser}/>
+      </div>
     </div>
     );
   }

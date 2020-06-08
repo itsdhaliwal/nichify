@@ -38,6 +38,8 @@ class Cart extends Component {
         else
             return (
                 <div>
+                    <br/>
+                    <div><h3>Cart</h3></div><br />
                    Add something...
                 </div>
             )

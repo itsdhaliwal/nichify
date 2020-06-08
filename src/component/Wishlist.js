@@ -37,6 +37,8 @@ class Wishlist extends Component {
         else
             return (
                 <div>
+                    <br/>
+                    <div><h3>Wishlist</h3></div><br />
                    Add something...
                 </div>
             )

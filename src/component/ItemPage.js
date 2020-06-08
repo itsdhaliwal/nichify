@@ -33,8 +33,8 @@ class ItemPage extends Component {
         <div  style={{backgroundColor:"white"}}>
          <div className="row p-4">
             <div className="col-4">
-                <div className="card shadow p-3 bg-white rounded ">
-                <div className="" style={{height:"350px" }}>
+                <div className="card shadow p-3 bg-dark rounded ">
+                <div className="card" style={{backgroundColor:"powderblue" , height:"350px" }}>
                   <div className="card-body">
                 <ImageFetch itemName = {this.props.match.params.id}/>
                   <h4 class="card-title">{this.state.item.itemType}</h4>
@@ -43,7 +43,7 @@ class ItemPage extends Component {
                 </div>
             </div> 
              <div className="col-4 ">
-             <div className="card shadow p-3  bg-white rounded " style={{height:"375px"}}>
+             <div className="card shadow p-3  bg-dark rounded " style={{height:"375px"}}>
                 <div className="mb-1" style={{backgroundColor:"powderblue",height:"355px"}}>
                 <div class="card-body">
                 <h1 class="card-title">{this.state.item.itemName}</h1>
@@ -55,11 +55,11 @@ class ItemPage extends Component {
                 </div>
              </div>
              <div className="col-4 ">
-             <div className="card shadow p-3 bg-white rounded " style={{height:"375px"}}>
+             <div className="card shadow p-3 bg-dark rounded " style={{height:"375px"}}>
                 <div className="mb-1" style={{backgroundColor:"powderblue",height:"355px"}}>
                 <div class="card-body">
                 <div className="pt-5">
-                    <Link to={"/Buy/" + this.state.item.itemPrice } className="btn btn-outline-primary p-2 pr-5" >Buy</Link>
+                    <Link to={"/Buy/" + this.state.item.itemPrice } className="btn btn-outline-success p-2 pr-5" >Buy</Link>
                     </div>
                     <div className="pt-5">
                     <AddToCartButton itemName={this.props.match.params.id} userID={this.props.authUser.uid} />
