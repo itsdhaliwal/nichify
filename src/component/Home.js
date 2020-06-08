@@ -8,97 +8,70 @@ import pic6 from "./6.jpg";
 import pic7 from "./7.jpg";
 import pic8 from "./8.jpg";
 import ItemPage from "./ItemPage";
-import Item from"./Item";
-import ItemFetch from"./ItemFetch"
+import Item from "./Item";
+import ItemFetch from "./ItemFetch"
 
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import TypeFetcher from "./TypeFetcher";
 
+//        <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
 class Home extends Component {
   render() {
+
     return (
-        <div style={{backgroundColor:"powderblue"}}>
-            
-        <div class="carousel cycle m-0 p-5 carousal slide shadow-lg p-3 mb-5 bg-light rounded " data-ride="carousel">
-          <div class="carousel-inner m-0 p-0" style={{ height: "600px" }}>
-            <div class="carousel-item active m-0 p-0 ">
-              <Link to="/ItemPage">
-              <img
-                src={pic1}
-                class="d-block col-12 m-0 "
-                alt="img1" 
-              ></img>
-              </Link>
+      <div style={{ backgroundColor: "powderblue" }}>
+        <div id="mycorousel" className="carousel slide m-0 p-5 carousal slide shadow-lg p-3 mb-5 bg-secondary rounded " data-ride="carousel">
+          <div className="carousel-inner m-0 p-0" style={{ height: "600px" }}>
+          <ol class="carousel-indicators">
+            <li data-target="#mycorousel" data-slide-to="0" class="active"></li>
+            <li data-target="#mycorousel" data-slide-to="1"></li>
+            <li data-target="#mycorousel" data-slide-to="2"></li>
+            <li data-target="#mycorousel" data-slide-to="3"></li>
+            <li data-target="#mycorousel" data-slide-to="4"></li>
+            <li data-target="#mycorousel" data-slide-to="5"></li>
+            <li data-target="#mycorousel" data-slide-to="6"></li>
+            <li data-target="#mycorousel" data-slide-to="7"></li>
+          </ol>
+            <div className="carousel-item active m-0 p-0 ">
+              <img src={pic1} className="d-block col-12 m-0 " alt="img1"  ></img>
             </div>
-            <div class="carousel-item">
-              <img
-                src={pic2}
-                class="d-block col-12 m-0"
-                alt="img2"
-              ></img>
+            <div className="carousel-item ">
+              <img src={pic2} className="d-block col-12 m-0" alt="img2" ></img>
             </div>
-            <div class="carousel-item">
-              <img
-                src={pic3}
-                class="d-block col-12 m-0"
-                alt="img3"
-              ></img>
+            <div className="carousel-item">
+              <img src={pic3} className="d-block col-12 m-0" alt="img3"></img>
             </div>
-            <div class="carousel-item m-0">
-              <img
-                src={pic4}
-                class="d-block col-12"
-                alt="img4"
-              ></img>
+            <div className="carousel-item m-0">
+              <img src={pic4} className="d-block col-12" alt="img4" ></img>
             </div>
-            <div class="carousel-item m-0">
-              <img
-                src={pic5}
-                class="d-block col-12 m-0"
-                alt="img5"
-              ></img>
+            <div className="carousel-item m-0">
+              <img src={pic5} className="d-block col-12" alt="img5" ></img>
             </div>
-            <div class="carousel-item">
-              <img
-                src={pic6}
-                class="d-block col-12 m-0"
-                alt="img6"
-              ></img>
+            <div className="carousel-item m-0">
+              <img src={pic6} className="d-block col-12" alt="img6" ></img>
             </div>
-            <div class="carousel-item">
-              <img
-                src={pic7}
-                class="d-block col-12 m-0"
-                alt="img7"
-              ></img>
+            <div className="carousel-item m-0">
+              <img src={pic7} className="d-block col-12" alt="img7" ></img>
             </div>
-            <div class="carousel-item">
-              <img
-                src={pic8}
-                class="d-block col-12 m-0"
-                alt="img8"
-              ></img>
+            <div className="carousel-item m-0">
+              <img src={pic8} className="d-block col-12" alt="img8" ></img>
             </div>
           </div>
-          <a
-            class="carousel-control-prev"
-            role="button"
-            data-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
+          <a className="carousel-control-prev" href="#mycorousel" role="button" data-slide="prev">
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="sr-only">Previous</span>
           </a>
-          <a
-            class="carousel-control-next"
-           // href="#carouselExampleControls"
-            role="button"
-            data-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
+          <a className="carousel-control-next" href="#mycorousel" role="button" data-slide="next" >
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="sr-only">Next</span>
           </a>
         </div>
-          <ItemFetch userID = {(this.props.user != null)?this.props.user.uid:''}/>
-        </div>
+        <ItemFetch userID={(this.props.user != null) ? this.props.user.uid : ''} />
+        <br/>dfswgf<br/>
+        <TypeFetcher userID={(this.props.user != null) ? this.props.user.uid : ''} />
+      </div>
     );
   }
 }

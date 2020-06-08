@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { withFirebase } from "./Firebase";
 import Navbar from "./navbar";
-
+import Navbar2 from "./navbar2";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
@@ -17,6 +17,7 @@ import Cart from "./Cart";
 import Wishlist from "./Wishlist";
 import Buy from "./Buy";
 import AddMoney from "./AddMoney";
+import TypeFetcher from "./TypeFetcher";
 
 class App extends Component {
   state = {
@@ -55,6 +56,7 @@ class App extends Component {
       <Router basename="/">
         <div style={{ minHeight: "100vh" }}>
           <Navbar />
+          <Navbar2 />
           <Switch>
             <Route path="/SignUp">
               <SignUp />
@@ -70,6 +72,9 @@ class App extends Component {
             <Route path="/itemPage">
               <ItemPage />
             </Route>
+            <Route path="/TypeFetcher">
+              <TypeFetcher />
+            </Route>
             <Route path="/">
               <div>Page Not Found</div>
             </Route>
@@ -82,6 +87,7 @@ class App extends Component {
       <Router basename="/">
         <div style={{ minHeight: "100vh" }}>
           <Navbar f_name={this.state.loggedUser.f_name} user={this.state.userData} Bal={this.state.loggedUser.Balance}/>
+          <Navbar2/>
           <Switch>
             <Route path="/SignUp">
               <SignUp />
@@ -107,6 +113,9 @@ class App extends Component {
             <Route path="/Home">
                 <Home user={this.state.userData}/>
             </Route>
+            <Route path="/TypeFetcher/:id?"  render={(props) => (
+          <TypeFetcher authUser={this.state.userData  } />)
+        } />
             <Route path="/itemPage/:id?"  render={(props) => (
           <ItemPage authUser={this.state.userData  } />)
         } />
