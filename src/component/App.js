@@ -107,7 +107,6 @@ class App extends Component {
             <Route path="/Home">
                 <Home user={this.state.userData}/>
             </Route>
-           
             <Route path="/itemPage/:id?" render={(props) => (
           <ItemPage authUser={this.state.userData} />)
         } />

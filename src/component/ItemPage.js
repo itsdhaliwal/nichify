@@ -45,9 +45,9 @@ class ItemPage extends Component {
              <div className="card shadow p-3  bg-white rounded " style={{height:"375px"}}>
                 <div className="mb-1" style={{backgroundColor:"powderblue",height:"355px"}}>
                 <div class="card-body">
-                <h1 class="card-title">Item Name:  {this.state.item.itemName}</h1>
-                <h3 class="card-title">Item Description:{this.state.item.itemDesc}</h3>
-                <h3 class="card-title">Item Price:{this.state.item.itemPrice} Rs</h3>
+                <h1 class="card-title">{this.state.item.itemName}</h1>
+                <h3 class="card-title">{this.state.item.itemDesc}</h3>
+                <h3 class="card-title">{this.state.item.itemPrice} Rs</h3>
                 <p></p>
                 </div>
                 </div>
