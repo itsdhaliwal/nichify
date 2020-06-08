@@ -81,7 +81,7 @@ class App extends Component {
     return (
       <Router basename="/">
         <div style={{ minHeight: "100vh" }}>
-          <Navbar f_name={this.state.loggedUser.f_name} user={this.state.userData} />
+          <Navbar f_name={this.state.loggedUser.f_name} user={this.state.userData} Bal={this.state.loggedUser.Balance}/>
           <Switch>
             <Route path="/SignUp">
               <SignUp />
@@ -107,8 +107,8 @@ class App extends Component {
             <Route path="/Home">
                 <Home user={this.state.userData}/>
             </Route>
-            <Route path="/itemPage/:id?" render={(props) => (
-          <ItemPage authUser={this.state.userData} />)
+            <Route path="/itemPage/:id?"  render={(props) => (
+          <ItemPage authUser={this.state.userData  } />)
         } />
             <Route path="/Buy/:id?" render={(props) => (
           <Buy user={this.state.loggedUser}/>)

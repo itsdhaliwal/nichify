@@ -46,7 +46,7 @@ class Navbar extends Component {
     <Link class="navbar-brand" to="/Home"><b>Nichify</b></Link>
             <img src={logo} style={{ height: "60px" }}></img>
           </div>
-          <div class="col-8 d-flex justify-content-center">
+          <div class="col-6 d-flex justify-content-center">
             <form class="form-inline col-12" onSubmit={(e) => { e.preventDefault(); this.onSubmit(); }} >
               <input class="form-control mr-sm-2 flex-grow-1" type="search" placeholder="Search" value={item_name} onChange={this.onChange}></input>
               
@@ -55,11 +55,10 @@ class Navbar extends Component {
                 </Link>
             </form>
           </div>
-          <div className="col-2 justify-content-center justify-content-sm-end">
-            <Navigation user={this.props.user} f_name={this.props.f_name}></Navigation>
+          <div className="col-4 justify-content-center justify-content-sm-end">
+            <Navigation user={this.props.user} f_name={this.props.f_name} Bal = {this.props.Bal}></Navigation>
           </div>
           <div>
-
           </div>
         </nav>
       </div>

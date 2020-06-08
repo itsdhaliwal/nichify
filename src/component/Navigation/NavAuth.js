@@ -11,6 +11,7 @@ class NavAuth extends Component {
   render() {
     return (
         <div class="btn-group dropleft">
+        <Link to="/AddMoney" className="bg-dark btn btn-outline-primary">{this.props.Bal}</Link>
         <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           {this.props.f_name}
         </button>

@@ -62,10 +62,10 @@ class ItemPage extends Component {
                     <Link to={"/Buy/" + this.state.item.itemPrice } className="btn btn-outline-primary p-2 pr-5" >Buy</Link>
                     </div>
                     <div className="pt-5">
-                    <AddToCartButton itemName={this.props.match.params.id} userID={this.props.userID} />
+                    <AddToCartButton itemName={this.props.match.params.id} userID={this.props.authUser.uid} />
                     </div>
                     <div className="pt-5">
-                    <AddToWishlistButton itemName={this.props.match.params.id} userID={this.props.user} />
+                    <AddToWishlistButton itemName={this.props.match.params.id} userID={this.props.authUser.uid} />
                     </div>
                 </div>
                 </div>
