@@ -36,7 +36,7 @@ class ItemPage extends Component {
                 <div className="" style={{backgroundColor:"powderblue" ,height:"350px"}}>
                 <div class="card-body">
                 <ImageFetch itemName = {this.props.match.params.id}/>
-                  <h4 class="card-title">Hand Crafted Thor's Hammmer</h4>
+                  <h4 class="card-title">{this.state.item.itemType}</h4>
                 </div>
                 </div>
                 </div>
@@ -45,8 +45,10 @@ class ItemPage extends Component {
              <div className="card shadow p-3  bg-white rounded " style={{height:"375px"}}>
                 <div className="mb-1" style={{backgroundColor:"powderblue",height:"355px"}}>
                 <div class="card-body">
-                <h1 class="card-title">Hand Crafted Thor's Hammmer</h1>
-                <p>{this.state.item.itemDesc}</p>
+                <h1 class="card-title">Item Name:  {this.state.item.itemName}</h1>
+                <h3 class="card-title">Item Description:{this.state.item.itemDesc}</h3>
+                <h3 class="card-title">Item Price:{this.state.item.itemPrice} Rs</h3>
+                <p></p>
                 </div>
                 </div>
                 </div>
