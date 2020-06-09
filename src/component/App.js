@@ -18,6 +18,7 @@ import Wishlist from "./Wishlist";
 import Buy from "./Buy";
 import AddMoney from "./AddMoney";
 import TypeFetcher from "./TypeFetcher";
+import ItemLogs from "./ItemLogs";
 
 class App extends Component {
   state = {
@@ -102,13 +103,16 @@ class App extends Component {
                 <AddMoney user={this.state.userData}/>
             </Route>
             <Route path="/ItemUploader">
-              <ItemUploader />
+              <ItemUploader user={this.state.userData  }/>
             </Route>
             <Route path="/Cart">
               <Cart user={this.state.userData}/>
             </Route>
             <Route path="/Wishlist">
               <Wishlist user={this.state.userData}/>
+            </Route>
+            <Route path="/ItemLogs">
+              <ItemLogs user={this.state.userData}/>
             </Route>
             <Route path="/Home">
                 <Home user={this.state.userData}/>

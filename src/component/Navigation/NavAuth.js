@@ -20,6 +20,7 @@ class NavAuth extends Component {
         <Link to="/ItemUploader" className="btn" >Sell</Link><br/>
         <Link to="/Cart" className="btn" >Cart</Link><br/>
         <Link to="/Wishlist" className="btn" >Wishlist</Link><br/>
+        <Link to="/ItemLogs" className="btn" >Item Uploaded</Link><br/>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#"><SignOut /></a>
         </div>

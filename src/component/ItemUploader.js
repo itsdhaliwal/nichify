@@ -51,6 +51,7 @@ class ItemUploader extends Component {
     onSubmit = (event) => {
         var key = this.props.firebase.db.ref().child("public/listings").push().key;
         this.handleUpload(key);
+        this.adddata(key);
         var {item_name,item_desc,item_price,item_type}= this.state;
         var itemDesc,itemName,itemPrice,item_type;
         var itemData = {
@@ -64,7 +65,11 @@ class ItemUploader extends Component {
         return this.props.firebase.db.ref().update(updates);
         console.log("hello");
     }
-
+    adddata =  (event) => {
+        var updates = {};
+        updates["users/" + this.props.user.uid +"/itemlogs/items/" + event] = {confirmed:false,shipped:false,delivered:false,cancelled:false};
+        return this.props.firebase.db.ref().update(updates);
+    }
     onChange = (event) => {
         this.setState({ [event.target.name]: event.target.value });
     };
