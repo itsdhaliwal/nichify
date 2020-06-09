@@ -62,8 +62,8 @@ class ItemUploader extends Component {
           };
          var updates = {};
          updates["public/listings/" + key] = itemData;
+         alert("Item Uploaded successfully");
         return this.props.firebase.db.ref().update(updates);
-        console.log("hello");
     }
     adddata =  (event) => {
         var updates = {};
