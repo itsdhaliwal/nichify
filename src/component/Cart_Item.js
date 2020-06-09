@@ -85,7 +85,7 @@ constructor(props){
                         <div class="card-body">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-sm">
+                                    <div class="col-sm m-2">
                                         <ImageFetch itemName={this.props.itemkey} />
                                     </div>
                                     <div class="col-sm">

@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-import pic1 from "./1.jpg";
-import pic2 from "./2.jpg";
-import pic3 from "./3.jpg";
-import pic4 from "./4.jpg";
-import pic5 from "./5.jpg";
-import pic6 from "./6.jpg";
-import pic7 from "./7.jpg";
-import pic8 from "./8.jpg";
+import pic1 from "./God-of-War-Poster.jpg";
+import pic2 from "./fort.jpg";
+import pic3 from "./ammo2.png";
+import pic4 from "./hi1.png";
+import pic5 from "./ironman.jpg";
 import ItemPage from "./ItemPage";
 import Item from "./Item";
 import ItemFetch from "./ItemFetch"
@@ -23,41 +20,41 @@ class Home extends Component {
     return (
       <div >
         <div id="mycorousel" className="carousel slide m-0 p-5 carousal slide p-3 mb-5 rounded " data-ride="carousel">
-          <div className="carousel-inner m-0 p-0" style={{ height: "600px" }}>
+          <div className="carousel-inner m-0 p-0" style={{ height: "600px"}}>
           <ol class="carousel-indicators">
             <li data-target="#mycorousel" data-slide-to="0" class="active"></li>
             <li data-target="#mycorousel" data-slide-to="1"></li>
             <li data-target="#mycorousel" data-slide-to="2"></li>
             <li data-target="#mycorousel" data-slide-to="3"></li>
             <li data-target="#mycorousel" data-slide-to="4"></li>
-            <li data-target="#mycorousel" data-slide-to="5"></li>
-            <li data-target="#mycorousel" data-slide-to="6"></li>
-            <li data-target="#mycorousel" data-slide-to="7"></li>
+
           </ol>
             <div className="carousel-item active m-0 p-0 ">
+            <Link to={"/ItemPage/-M9LLZHJiYMgIp02SgKr" }>
               <img src={pic1} className="d-block col-12 m-0 " alt="img1"  ></img>
+              </Link>
             </div>
             <div className="carousel-item ">
+            <Link to={"/ItemPage/-M9LL59rHCAV25sBwTXG" }>
               <img src={pic2} className="d-block col-12 m-0" alt="img2" ></img>
+              </Link>
             </div>
             <div className="carousel-item">
+            <Link to={"/ItemPage/-M9LIW9Wawh5EzEAI5Tt" }>
               <img src={pic3} className="d-block col-12 m-0" alt="img3"></img>
+              </Link>
             </div>
             <div className="carousel-item m-0">
+            <Link to={"/ItemPage/-M9LJUFOCH_ydehODtVn" }>
               <img src={pic4} className="d-block col-12" alt="img4" ></img>
+              </Link>
             </div>
             <div className="carousel-item m-0">
+            <Link to={"/ItemPage/-M9LHtBMGHdq6Zr4KT9i" }>
               <img src={pic5} className="d-block col-12" alt="img5" ></img>
+              </Link>
             </div>
-            <div className="carousel-item m-0">
-              <img src={pic6} className="d-block col-12" alt="img6" ></img>
-            </div>
-            <div className="carousel-item m-0">
-              <img src={pic7} className="d-block col-12" alt="img7" ></img>
-            </div>
-            <div className="carousel-item m-0">
-              <img src={pic8} className="d-block col-12" alt="img8" ></img>
-            </div>
+
           </div>
           <a className="carousel-control-prev" href="#mycorousel" role="button" data-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -30,11 +30,18 @@ class ImageFetch extends Component {
     this.getImage(this.props.itemName)
   }
   render() {
+    if(this.props.size != "300")
     return (
         <div>        
             <img src={this.state.item} alt="sword" style={{height:"200px" , width:"200px"}} />
         </div>
     );
+    else
+    return (
+      <div>        
+          <img src={this.state.item} alt="sword" style={{height:"300px" , width:"300px"}} />
+      </div>
+  );
   }
 }
 

@@ -73,7 +73,7 @@ class ItemUploader extends Component {
         var {item_name,item_desc,item_price,item_type}= this.state;
         return (
             <div>
-                <div className="d-flex pt-5 justify-content-center" style={{ backgroundColor: "powderblue", height: "95vh" }}>
+                <div className="d-flex pt-5 justify-content-center" style={{ backgroundColor: "powderblue", height: "110vh" }}>
                 <div class="card col-6 text-white bg-dark mb-3">
           <div class="card-body">
                 <h1>Item Uploader</h1>
@@ -81,7 +81,7 @@ class ItemUploader extends Component {
                 <h4>Item Name</h4>
                 <input type="text" placeholder="Enter Item Name" name="item_name"  value={item_name} onChange={this.onChange}></input>
                 <h4>Item Description</h4>
-                <input type="text" placeholder="Enter Item Desc" name="item_desc"  value={item_desc} onChange={this.onChange}></input>
+                <input type="text" placeholder="Enter Item Desc" name="item_desc" size="50" value={item_desc} onChange={this.onChange}></input>
                 <h4>Item Price</h4>
                 <input type="number" placeholder="Enter Item Price" name="item_price"  value={item_price} onChange={this.onChange}></input>
                 <h4>Item Type</h4>
