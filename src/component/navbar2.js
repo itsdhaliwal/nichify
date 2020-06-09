@@ -120,6 +120,9 @@ class Navbar2 extends Component {
                   <Link to="/TypeFetcher/WoodenKeyChain" className="btn">
                     Wooden Key Chain
                   </Link>
+                  <Link to="/TypeFetcher/SeaShellKeyChain" className="btn">
+                    Sea Shell Key Chain
+                  </Link>
                   <br />
                 </div>
               </div>
