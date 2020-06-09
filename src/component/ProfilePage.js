@@ -4,6 +4,7 @@ import { Link, withRouter} from "react-router-dom";
 import ItemUploader from"./ItemUploader"
 import Cart from "./Cart.js"
 import Wishlist from "./Wishlist.js"
+import ItemLogs from "./ItemLogs";
 
 class ProfilePage extends Component {
   render() {   
@@ -44,6 +45,7 @@ class ProfilePage extends Component {
         </div>
       </div>
       <div className="col-8 py-2">
+      <ItemLogs user={this.props.authUser}/>
       <Cart user={this.props.authUser}/>
       <Wishlist user={this.props.authUser}/>
       </div>
