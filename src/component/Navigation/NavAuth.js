@@ -1,17 +1,30 @@
 import React, { Component } from "react";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Firebase from "../Firebase";
-import { Link } from "react-router-dom";
+import { Link, withRouter} from "react-router-dom";
 import SignOut from "../SignOut";
+import {withFirebase} from "../Firebase"
 
 class NavAuth extends Component {
   /*  constructor(props) {
           super(props);
       }*/
+      state={
+        bal:0,
+        id:null
+      }
+      
+      componentDidMount() {
+        this.props.firebase.db.ref("users/"+this.props.firebase.auth.currentUser.uid+"/Balance")
+        .on('value',(snapshot)=>{
+          const balance=snapshot.val();
+          this.setState({bal:balance})
+        })
+      }
   render() {
     return (
         <div class="btn-group dropleft">
-        <Link to="/AddMoney" className="bg-dark btn btn-outline-primary">Rs.{this.props.Bal}</Link>
+        <Link to="/AddMoney" className="bg-dark btn btn-outline-primary">Rs.{this.state.bal}</Link>
         <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           {this.props.f_name}
         </button>
@@ -28,5 +41,5 @@ class NavAuth extends Component {
     );
   }
 }
-export default NavAuth;
+export default withRouter(withFirebase(NavAuth));
 

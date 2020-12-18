@@ -7,6 +7,18 @@ import Wishlist from "./Wishlist.js"
 import ItemLogs from "./ItemLogs";
 
 class ProfilePage extends Component {
+  state={
+    bal:0,
+    id:null
+  }
+  
+  componentDidMount() {
+    this.props.firebase.db.ref("users/"+this.props.firebase.auth.currentUser.uid+"/Balance")
+    .on('value',(snapshot)=>{
+      const balance=snapshot.val();
+      this.setState({bal:balance})
+    })
+  }
   render() {   
     console.log(this.props)
     return (
@@ -38,7 +50,7 @@ class ProfilePage extends Component {
         <div className="col-12 py-1 d-flex border-top">
             <div className="flex-shrink-1 h5 ">Balance:{" "}</div>
             <div className="flex-grow-1"></div>
-            <div className="flex-shrink-1"> {this.props.user.Balance}</div>
+            <div className="flex-shrink-1"> {this.state.bal}</div>
           </div>
         <div className="col-12 pt-2 d-flex justify-content-center">
           <Link to="/AddMoney" className="btn btn-dark col-6 p-2" >Add Money</Link>
@@ -54,4 +66,4 @@ class ProfilePage extends Component {
   }
 }
 
-export default ProfilePage;
+export default withRouter(withFirebase(ProfilePage));
